@@ -38,25 +38,25 @@ const translations = {
     "skill-cat-3": "Tools & Design",
     "view-project": "View Project",
     "view-live": "Live Demo",
-    "p1-tag": "Full-Stack App",
+    "p1-tag": "Front-End App",
     "p1-title": "My Planner",
-    "p1-desc": "Designed and built a responsive planner web application for managing daily, weekly, monthly, and yearly tasks, with a notes section for achievements and observations timestamped automatically. Included task completion, editing, and deletion features, along with an analysis dashboard showing task statistics. Built with HTML5, CSS3, and JavaScript.",
+    "p1-desc": "A responsive planner web application for managing daily, weekly, monthly, and yearly tasks with notes section and analysis dashboard. Built with HTML5, CSS3, and JavaScript.",
     "p1-date": "Sep 2025",
     "p2-tag": "Task Management",
     "p2-title": "To-Do List",
-    "p2-desc": "Created a responsive task management app with Dashboard, All Tasks, and Add Task pages, implementing task filtering, notifications, and data persistence using Local Storage. Built with HTML5, CSS3, and JavaScript.",
+    "p2-desc": "A responsive task management app with Dashboard, All Tasks, and Add Task pages, featuring task filtering, notifications, and local storage persistence.",
     "p2-date": "Aug 2025",
     "p3-tag": "Healthcare",
     "p3-title": "Care Connect",
-    "p3-desc": "A simple web platform to explore hospital, medical specialties, and doctors, with easy contact features. Built using HTML, CSS, and Bootstrap.",
+    "p3-desc": "A web platform to explore hospitals, medical specialties, and doctors with easy contact features. Built using HTML, CSS, and Bootstrap.",
     "p3-date": "Dec 2024",
     "p4-tag": "Landing Page",
     "p4-title": "Applight",
-    "p4-desc": "A Simple and Clean Landing Page for Mobile Applications Built Using HTML and CSS.",
+    "p4-desc": "A clean and modern landing page for mobile applications built with HTML and CSS.",
     "p4-date": "Nov 2024",
     "p5-tag": "Landing Page",
     "p5-title": "Leon",
-    "p5-desc": "A Simple and Clean Landing Page for Mobile Applications Built Using HTML and CSS.",
+    "p5-desc": "A simple and elegant landing page for creative agencies built with HTML and CSS.",
     "p5-date": "Aug 2024",
     "exp-1-title": "Full-Stack .NET Developer Trainee",
     "exp-1-org": "DEPI Initiative",
@@ -78,8 +78,8 @@ const translations = {
     "service-1-desc": "Turning designs into fast, responsive websites using HTML, CSS, and JavaScript.",
     "service-2": ".NET Development",
     "service-2-desc": "Building robust and scalable web applications using ASP.NET Core and Entity Framework.",
-    "service-3": "UI/UX Design",
-    "service-3-desc": "Designing attractive and user-friendly interfaces focused on user needs.",
+    "service-3": "Graphic Design",
+    "service-3-desc": "Creating stunning visuals and brand identities using Adobe Creative Suite and Figma.",
     "service-4": "Database Management",
     "service-4-desc": "Designing and managing SQL Server databases for high performance and efficiency.",
     "contact-email": "Email",
@@ -118,25 +118,25 @@ const translations = {
     "skill-cat-3": "أدوات وتصميم",
     "view-project": "عرض المشروع",
     "view-live": "عرض مباشر",
-    "p1-tag": "تطبيق متكامل",
+    "p1-tag": "تطبيق واجهات",
     "p1-title": "My Planner",
-    "p1-desc": "تصميم وبناء تطبيق مخطط ويب متجاوب لإدارة المهام اليومية والأسبوعية والشهرية والسنوية، مع قسم للملاحظات والإنجازات يتم توقيته تلقائياً. يتضمن ميزات إكمال المهام وتعديلها وحذفها، بالإضافة إلى لوحة تحليلية تعرض إحصائيات المهام. تم البناء باستخدام HTML5, CSS3, JavaScript.",
+    "p1-desc": "تطبيق مخطط ويب متجاوب لإدارة المهام اليومية والأسبوعية والشهرية والسنوية مع قسم للملاحظات ولوحة تحليلية.",
     "p1-date": "سبتمبر 2025",
     "p2-tag": "إدارة المهام",
     "p2-title": "قائمة المهام",
-    "p2-desc": "إنشاء تطبيق متجاوب لإدارة المهام يحتوي على صفحات للوحة الرئيسية وجميع المهام وإضافة مهمة جديدة، مع تطبيق تصفية للمهام وإشعارات وحفظ البيانات باستخدام التخزين المحلي. تم البناء باستخدام HTML5, CSS3, JavaScript.",
+    "p2-desc": "تطبيق متجاوب لإدارة المهام مع لوحة رئيسية وجميع المهام وإضافة مهمة، مع تصفية وإشعارات وحفظ محلي.",
     "p2-date": "أغسطس 2025",
     "p3-tag": "الرعاية الصحية",
     "p3-title": "Care Connect",
-    "p3-desc": "منصة ويب بسيطة لاستكشاف المستشفيات والتخصصات الطبية والأطباء، مع ميزات سهولة التواصل. تم بناؤها باستخدام HTML و CSS و Bootstrap.",
+    "p3-desc": "منصة ويب لاستكشاف المستشفيات والتخصصات الطبية والأطباء مع ميزات التواصل. بنيت باستخدام HTML, CSS, Bootstrap.",
     "p3-date": "ديسمبر 2024",
     "p4-tag": "صفحة هبوط",
     "p4-title": "Applight",
-    "p4-desc": "صفحة هبوط بسيطة ونظيفة لتطبيقات الهاتف، تم بناؤها باستخدام HTML و CSS.",
+    "p4-desc": "صفحة هبوط نظيفة وعصرية لتطبيقات الهاتف بنيت باستخدام HTML و CSS.",
     "p4-date": "نوفمبر 2024",
     "p5-tag": "صفحة هبوط",
     "p5-title": "Leon",
-    "p5-desc": "صفحة هبوط بسيطة ونظيفة لتطبيقات الهاتف، تم بناؤها باستخدام HTML و CSS.",
+    "p5-desc": "صفحة هبوط بسيطة وأنيقة للوكالات الإبداعية بنيت باستخدام HTML و CSS.",
     "p5-date": "أغسطس 2024",
     "exp-1-title": "متدربة مطورة .NET متكاملة",
     "exp-1-org": "مبادرة DEPI",
@@ -158,8 +158,8 @@ const translations = {
     "service-1-desc": "تحويل التصاميم إلى مواقع ويب متجاوبة وسريعة باستخدام HTML، CSS، JavaScript.",
     "service-2": "تطوير .NET",
     "service-2-desc": "بناء تطبيقات ويب قوية وقابلة للتطوير باستخدام ASP.NET Core و Entity Framework.",
-    "service-3": "تصميم UI/UX",
-    "service-3-desc": "تصميم واجهات مستخدم جذابة وسهلة الاستخدام تركز على احتياجات المستخدم.",
+    "service-3": "تصميم جرافيك",
+    "service-3-desc": "إنشاء تصاميم مبهرة وهويات علامات تجارية باستخدام Adobe Creative Suite و Figma.",
     "service-4": "إدارة قواعد البيانات",
     "service-4-desc": "تصميم وإدارة قواعد بيانات SQL Server لضمان أداء وكفاءة عالية.",
     "contact-email": "البريد الإلكتروني",
@@ -170,7 +170,7 @@ const translations = {
   }
 };
 
-let currentLang = localStorage.getItem('portfolio-lang') || 'en'; // Default to English
+let currentLang = localStorage.getItem('portfolio-lang') || 'en';
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -208,26 +208,26 @@ function type() {
 
 // 4. Particles.js Configuration
 if (typeof particlesJS !== 'undefined') {
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 50, density: { enable: true, value_area: 800 } },
-        color: { value: "#00d2ff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.2 },
-        size: { value: 2 },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#00d2ff",
-          opacity: 0.1,
-          width: 1,
-        },
-        move: { enable: true, speed: 1.5 },
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 50, density: { enable: true, value_area: 800 } },
+      color: { value: "#00d2ff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.2 },
+      size: { value: 2 },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#00d2ff",
+        opacity: 0.1,
+        width: 1,
       },
-      interactivity: {
-        events: { onhover: { enable: true, mode: "grab" } },
-      },
-    });
+      move: { enable: true, speed: 1.5 },
+    },
+    interactivity: {
+      events: { onhover: { enable: true, mode: "grab" } },
+    },
+  });
 }
 
 // 5. Language Switcher
@@ -239,7 +239,6 @@ function updateLanguage(lang) {
   
   const t = translations[lang];
   
-  // Update all data-t elements
   document.querySelectorAll('[data-t]').forEach(el => {
     const key = el.getAttribute('data-t');
     if (t[key]) {
@@ -247,13 +246,11 @@ function updateLanguage(lang) {
     }
   });
 
-  // Update language button
   const langBtn = document.getElementById('lang-switch');
   if (langBtn) {
     langBtn.textContent = lang === 'en' ? 'العربية' : 'English';
   }
 
-  // Restart typewriter
   clearTimeout(typewriterTimeout);
   wordIndex = 0;
   charIndex = 0;
@@ -268,17 +265,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
   const langBtn = document.getElementById("lang-switch");
 
-  // Initialize Language (English as default)
   updateLanguage('en');
 
-  // Menu Toggle
   menuToggle.addEventListener("click", () => {
     menuToggle.classList.toggle("open");
     navLinks.classList.toggle("active");
     document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
   });
 
-  // Close menu on link click
   document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
       menuToggle.classList.remove("open");
@@ -287,7 +281,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Navbar scroll effect
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
       navbar.classList.add("scrolled");
@@ -296,14 +289,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Language Switcher
   langBtn.addEventListener("click", () => {
     const newLang = currentLang === 'en' ? 'ar' : 'en';
     updateLanguage(newLang);
   });
 });
 
-// 7. Smooth scroll for navigation
+// 7. Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href');

@@ -13,11 +13,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navbar - Redesigned -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <span class="logo-text">Marina <span>Samir</span></span>
+                <div class="logo-icon">
+                    <span class="logo-dot"></span>
+                </div>
+                <span class="logo-text">Marina<span>Samir</span></span>
             </a>
 
             <div class="menu-toggler" id="menu-toggler">
@@ -31,14 +34,16 @@
                 <li><a href="#experience" data-t="nav-exp">Experience</a></li>
                 <li><a href="#services" data-t="nav-services">Services</a></li>
                 <li><a href="#contact" class="nav-cta" data-t="nav-contact">Contact</a></li>
-                <li><button id="lang-switch" class="lang-switch">العربية</button></li>
+                <li class="lang-switch-container">
+                    <button id="lang-switch" class="lang-switch">العربية</button>
+                </li>
             </ul>
         </div>
     </nav>
 
     <div id="particles-js"></div>
 
-    <!-- Hero Section with Profile Image -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-container">
             <div class="hero-content" data-aos="fade-right" data-aos-duration="1500">
@@ -128,16 +133,18 @@
                 <!-- Project 1: My Planner -->
                 <div class="project-item" data-aos="fade-up">
                     <div class="project-img">
-                        <img src="MyPlanner.png" alt="My Planner">
+                        <div class="img-wrapper">
+                            <img src="MyPlanner.png" alt="My Planner">
+                        </div>
                         <div class="project-overlay">
                             <a href="https://marina-samir15.github.io/My-Planner/" target="_blank" class="overlay-btn" data-t="view-project">View Project</a>
                         </div>
                     </div>
                     <div class="project-inner">
-                        <span class="p-tag" data-t="p1-tag">Full-Stack App</span>
+                        <span class="p-tag" data-t="p1-tag">Front-End App</span>
                         <h3 data-t="p1-title">My Planner</h3>
                         <p class="project-description" data-t="p1-desc">
-                            Designed and built a responsive planner web application for managing daily, weekly, monthly, and yearly tasks, with a notes section for achievements and observations timestamped automatically. Included task completion, editing, and deletion features, along with an analysis dashboard showing task statistics. Built with HTML5, CSS3, and JavaScript.
+                            A responsive planner web application for managing daily, weekly, monthly, and yearly tasks with notes section and analysis dashboard. Built with HTML5, CSS3, and JavaScript.
                         </p>
                         <div class="project-meta">
                             <span class="project-date" data-t="p1-date">Sep 2025</span>
@@ -149,7 +156,9 @@
                 <!-- Project 2: To-Do List -->
                 <div class="project-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-img">
-                        <img src="ToDoList.png" alt="To-Do List">
+                        <div class="img-wrapper">
+                            <img src="ToDoList.png" alt="To-Do List">
+                        </div>
                         <div class="project-overlay">
                             <a href="https://marina-samir15.github.io/todo-list/" target="_blank" class="overlay-btn" data-t="view-project">View Project</a>
                         </div>
@@ -158,7 +167,7 @@
                         <span class="p-tag" data-t="p2-tag">Task Management</span>
                         <h3 data-t="p2-title">To-Do List</h3>
                         <p class="project-description" data-t="p2-desc">
-                            Created a responsive task management app with Dashboard, All Tasks, and Add Task pages, implementing task filtering, notifications, and data persistence using Local Storage. Built with HTML5, CSS3, and JavaScript.
+                            A responsive task management app with Dashboard, All Tasks, and Add Task pages, featuring task filtering, notifications, and local storage persistence.
                         </p>
                         <div class="project-meta">
                             <span class="project-date" data-t="p2-date">Aug 2025</span>
@@ -170,8 +179,9 @@
                 <!-- Project 3: Care Connect -->
                 <div class="project-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-img">
-                      <!--mmmmmmmmmmmmmmmmmmmmm-->
-                        <img src="" alt="Care Connect">
+                        <div class="img-wrapper">
+                            <img src="careconnect.png" alt="Care Connect">
+                        </div>
                         <div class="project-overlay">
                             <a href="https://marina-samir15.github.io/Care-Connect/" target="_blank" class="overlay-btn" data-t="view-project">View Project</a>
                         </div>
@@ -180,7 +190,7 @@
                         <span class="p-tag" data-t="p3-tag">Healthcare</span>
                         <h3 data-t="p3-title">Care Connect</h3>
                         <p class="project-description" data-t="p3-desc">
-                            A simple web platform to explore hospital, medical specialties, and doctors, with easy contact features. Built using HTML, CSS, and Bootstrap.
+                            A web platform to explore hospitals, medical specialties, and doctors with easy contact features. Built using HTML, CSS, and Bootstrap.
                         </p>
                         <div class="project-meta">
                             <span class="project-date" data-t="p3-date">Dec 2024</span>
@@ -192,7 +202,9 @@
                 <!-- Project 4: Applight -->
                 <div class="project-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="project-img">
-                        <img src="" alt="Applight">
+                        <div class="img-wrapper">
+                            <img src="applight.png" alt="Applight">
+                        </div>
                         <div class="project-overlay">
                             <a href="#" target="_blank" class="overlay-btn" data-t="view-project">View Project</a>
                         </div>
@@ -201,7 +213,7 @@
                         <span class="p-tag" data-t="p4-tag">Landing Page</span>
                         <h3 data-t="p4-title">Applight</h3>
                         <p class="project-description" data-t="p4-desc">
-                            A Simple and Clean Landing Page for Mobile Applications Built Using HTML and CSS.
+                            A clean and modern landing page for mobile applications built with HTML and CSS.
                         </p>
                         <div class="project-meta">
                             <span class="project-date" data-t="p4-date">Nov 2024</span>
@@ -213,7 +225,9 @@
                 <!-- Project 5: Leon -->
                 <div class="project-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="project-img">
-                        <img src="Leon.png" alt="Leon">
+                        <div class="img-wrapper">
+                            <img src="Leon.png" alt="Leon">
+                        </div>
                         <div class="project-overlay">
                             <a href="https://marina-samir15.github.io/Leon/" target="_blank" class="overlay-btn" data-t="view-project">View Project</a>
                         </div>
@@ -222,7 +236,7 @@
                         <span class="p-tag" data-t="p5-tag">Landing Page</span>
                         <h3 data-t="p5-title">Leon</h3>
                         <p class="project-description" data-t="p5-desc">
-                            A Simple and Clean Landing Page for Mobile Applications Built Using HTML and CSS.
+                            A simple and elegant landing page for creative agencies built with HTML and CSS.
                         </p>
                         <div class="project-meta">
                             <span class="project-date" data-t="p5-date">Aug 2024</span>
@@ -280,7 +294,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section - Updated -->
     <section id="services" class="services-section">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up" data-t="services-title">Services <span>I Offer</span></h2>
@@ -297,8 +311,8 @@
                 </div>
                 <div class="service-card" data-aos="flip-right" data-aos-delay="200">
                     <i class="fas fa-paint-brush"></i>
-                    <h3 data-t="service-3">UI/UX Design</h3>
-                    <p data-t="service-3-desc">Designing attractive and user-friendly interfaces focused on user needs.</p>
+                    <h3 data-t="service-3">Graphic Design</h3>
+                    <p data-t="service-3-desc">Creating stunning visuals and brand identities using Adobe Creative Suite and Figma.</p>
                 </div>
                 <div class="service-card" data-aos="flip-right" data-aos-delay="300">
                     <i class="fas fa-database"></i>
@@ -309,7 +323,7 @@
         </div>
     </section>
 
-    <!-- Contact Section - Simple & Clean -->
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up" data-t="contact-title">Get In <span>Touch</span></h2>
