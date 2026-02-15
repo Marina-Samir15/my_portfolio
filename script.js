@@ -9,7 +9,7 @@ AOS.init({
 // 2. Translations Object
 const translations = {
   en: {
-    words: ["Full-Stack .NET Developer", "Graphic Designer", "Problem Solver"],
+    words: ["Full-Stack .NET Developer"],
     heroGreeting: "Hi, I'm",
     aboutTitle: "About <span>Me</span>",
     skillsTitle: "Technical <span>Skills</span>",
@@ -26,7 +26,7 @@ const translations = {
     eduTitle: "Education & Training"
   },
   ar: {
-    words: ["مطور .NET متكامل", "مصممة جرافيك", "حلالة مشكلات"],
+    words: ["مطور .NET متكامل"],
     heroGreeting: "مرحباً، أنا",
     aboutTitle: "نبذة <span>عني</span>",
     skillsTitle: "المهارات <span>التقنية</span>",
