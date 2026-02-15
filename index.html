@@ -61,13 +61,13 @@
         <h2 class="section-title" data-aos="fade-up" data-t="about-title">About <span>Me</span></h2>
         <div class="about-grid">
           <div class="about-text" data-aos="fade-right">
-            <p>
+            <p data-t="about-p1">
               I am a <strong class="highlight">Full-Stack .NET Developer</strong> with a solid
               foundation in Information Technology. Currently, I'm honing my
               expertise through the <strong class="highlight">DEPI Initiative</strong>, focusing
               on building scalable and efficient web applications.
             </p>
-            <p>
+            <p data-t="about-p2">
               With a background in <strong class="highlight">Graphic Design</strong>, I ensure
               that my back-end logic is complemented by clean, user-friendly,
               and fully responsive interfaces.
@@ -79,15 +79,15 @@
               <li>
                 <i class="fas fa-graduation-cap"></i>
                 <div>
-                  <strong>Information Technology</strong>
-                  <p>NATU University</p>
+                  <strong data-t="edu-1-title">Information Technology</strong>
+                  <p data-t="edu-1-org">NATU University</p>
                 </div>
               </li>
               <li>
                 <i class="fas fa-laptop-code"></i>
                 <div>
-                  <strong>Full-Stack .NET Track</strong>
-                  <p>DEPI (Digital Egypt Pioneers Initiative)</p>
+                  <strong data-t="edu-2-title">Full-Stack .NET Track</strong>
+                  <p data-t="edu-2-org">DEPI (Digital Egypt Pioneers Initiative)</p>
                 </div>
               </li>
             </ul>
@@ -104,7 +104,7 @@
           <!-- Backend -->
           <div class="skill-category-card" data-aos="zoom-in">
             <div class="skill-icon-wrap"><i class="fas fa-database"></i></div>
-            <h3>Languages & Back-End</h3>
+            <h3 data-t="skill-cat-1">Languages & Back-End</h3>
             <div class="skill-list-new">
               <span>C#</span>
               <span>.NET Core</span>
@@ -120,7 +120,7 @@
           <!-- Frontend -->
           <div class="skill-category-card" data-aos="zoom-in" data-aos-delay="200">
             <div class="skill-icon-wrap"><i class="fas fa-laptop-code"></i></div>
-            <h3>Front-End</h3>
+            <h3 data-t="skill-cat-2">Front-End</h3>
             <div class="skill-list-new">
               <span>HTML5</span>
               <span>CSS3</span>
@@ -132,7 +132,7 @@
           <!-- Tools -->
           <div class="skill-category-card" data-aos="zoom-in" data-aos-delay="400">
             <div class="skill-icon-wrap"><i class="fas fa-swatchbook"></i></div>
-            <h3>Tools & Design</h3>
+            <h3 data-t="skill-cat-3">Tools & Design</h3>
             <div class="skill-list-new">
               <span>Git & GitHub</span>
               <span>OOP</span>
@@ -152,48 +152,60 @@
           <div class="project-item" data-aos="fade-up">
             <div class="project-img">
               <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="My Planner">
+              <div class="project-overlay">
+                <a href="https://marina-samir15.github.io/My-Planner/" target="_blank" class="overlay-btn" data-t="view-project">Visit Project</a>
+              </div>
             </div>
             <div class="project-inner">
-              <span class="p-tag">Dynamic App</span>
-              <h3>My Planner</h3>
-              <p>Advanced task management with an analytical soul and local persistence.</p>
-              <a href="https://marina-samir15.github.io/My-Planner/" target="_blank" class="p-btn">View Live <i class="fas fa-arrow-right"></i></a>
+              <span class="p-tag" data-t="p1-tag">Dynamic App</span>
+              <h3 data-t="p1-title">My Planner</h3>
+              <p data-t="p1-desc">Advanced task management with an analytical soul and local persistence.</p>
+              <a href="https://marina-samir15.github.io/My-Planner/" target="_blank" class="p-btn"><span data-t="view-live">View Live</span> <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <!-- Project 2 -->
           <div class="project-item" data-aos="fade-up" data-aos-delay="100">
             <div class="project-img">
               <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=800&q=80" alt="To-Do List">
+              <div class="project-overlay">
+                <a href="https://marina-samir15.github.io/todo-list/" target="_blank" class="overlay-btn" data-t="view-project">Visit Project</a>
+              </div>
             </div>
             <div class="project-inner">
-              <span class="p-tag">Logic Heavy</span>
-              <h3>To-Do List</h3>
-              <p>Clean, efficient task filtering with real-time feedback and sleek UI.</p>
-              <a href="https://marina-samir15.github.io/todo-list/" target="_blank" class="p-btn">View Live <i class="fas fa-arrow-right"></i></a>
+              <span class="p-tag" data-t="p2-tag">Logic Heavy</span>
+              <h3 data-t="p2-title">To-Do List</h3>
+              <p data-t="p2-desc">Clean, efficient task filtering with real-time feedback and sleek UI.</p>
+              <a href="https://marina-samir15.github.io/todo-list/" target="_blank" class="p-btn"><span data-t="view-live">View Live</span> <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <!-- Project 3 -->
           <div class="project-item" data-aos="fade-up" data-aos-delay="200">
             <div class="project-img">
               <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Care Connect">
+              <div class="project-overlay">
+                <a href="https://marina-samir15.github.io/Care-Connect/" target="_blank" class="overlay-btn" data-t="view-project">Visit Project</a>
+              </div>
             </div>
             <div class="project-inner">
-              <span class="p-tag">Healthcare</span>
-              <h3>Care Connect</h3>
-              <p>Healthcare platform connecting patients with specialized medical care.</p>
-              <a href="https://marina-samir15.github.io/Care-Connect/" target="_blank" class="p-btn">View Live <i class="fas fa-arrow-right"></i></a>
+              <span class="p-tag" data-t="p3-tag">Healthcare</span>
+              <h3 data-t="p3-title">Care Connect</h3>
+              <p data-t="p3-desc">Healthcare platform connecting patients with specialized medical care.</p>
+              <a href="https://marina-samir15.github.io/Care-Connect/" target="_blank" class="p-btn"><span data-t="view-live">View Live</span> <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <!-- Project 4 - Leon -->
           <div class="project-item" data-aos="fade-up" data-aos-delay="300">
             <div class="project-img">
               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Leon">
+              <div class="project-overlay">
+                <a href="https://marina-samir15.github.io/Leon/" target="_blank" class="overlay-btn" data-t="view-project">Visit Project</a>
+              </div>
             </div>
             <div class="project-inner">
-              <span class="p-tag">Restaurant</span>
-              <h3>Leon</h3>
-              <p>Modern restaurant landing page with elegant design and smooth animations.</p>
-              <a href="https://marina-samir15.github.io/Leon/" target="_blank" class="p-btn">View Live <i class="fas fa-arrow-right"></i></a>
+              <span class="p-tag" data-t="p4-tag">Restaurant</span>
+              <h3 data-t="p4-title">Leon</h3>
+              <p data-t="p4-desc">Modern restaurant landing page with elegant design and smooth animations.</p>
+              <a href="https://marina-samir15.github.io/Leon/" target="_blank" class="p-btn"><span data-t="view-live">View Live</span> <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -208,40 +220,40 @@
           <div class="timeline-item" data-aos="fade-up">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h3>Full-Stack .NET Developer Trainee</h3>
-              <p class="timeline-org">DEPI Initiative</p>
-              <p class="timeline-desc">Currently advancing my expertise in building scalable web applications using .NET technologies.</p>
-              <span class="timeline-date">Present</span>
+              <h3 data-t="exp-1-title">Full-Stack .NET Developer Trainee</h3>
+              <p class="timeline-org" data-t="exp-1-org">DEPI Initiative</p>
+              <p class="timeline-desc" data-t="exp-1-desc">Currently advancing my expertise in building scalable web applications using .NET technologies.</p>
+              <span class="timeline-date" data-t="exp-1-date">Present</span>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h3>Problem Solving Mentor</h3>
-              <p class="timeline-org">NATU University</p>
-              <p class="timeline-desc">Mentoring students in problem-solving techniques and programming fundamentals.</p>
-              <span class="timeline-date">2024 - Present</span>
+              <h3 data-t="exp-2-title">Problem Solving Mentor</h3>
+              <p class="timeline-org" data-t="exp-2-org">NATU University</p>
+              <p class="timeline-desc" data-t="exp-2-desc">Mentoring students in problem-solving techniques and programming fundamentals.</p>
+              <span class="timeline-date" data-t="exp-2-date">2024 - Present</span>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h3>Java Programming Training</h3>
-              <p class="timeline-org">Information Technology Institute (ITI)</p>
-              <p class="timeline-desc">Completed comprehensive Java programming course with focus on OOP and data structures.</p>
-              <span class="timeline-date">2023 - 2024</span>
+              <h3 data-t="exp-3-title">Java Programming Training</h3>
+              <p class="timeline-org" data-t="exp-3-org">Information Technology Institute (ITI)</p>
+              <p class="timeline-desc" data-t="exp-3-desc">Completed comprehensive Java programming course with focus on OOP and data structures.</p>
+              <span class="timeline-date" data-t="exp-3-date">2023 - 2024</span>
             </div>
           </div>
 
           <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h3>Graphic Design Specialist</h3>
-              <p class="timeline-org">National Telecommunication Institute (NTI)</p>
-              <p class="timeline-desc">Specialized in UI/UX design and digital graphics with Adobe Creative Suite.</p>
-              <span class="timeline-date">2022 - 2023</span>
+              <h3 data-t="exp-4-title">Graphic Design Specialist</h3>
+              <p class="timeline-org" data-t="exp-4-org">National Telecommunication Institute (NTI)</p>
+              <p class="timeline-desc" data-t="exp-4-desc">Specialized in UI/UX design and digital graphics with Adobe Creative Suite.</p>
+              <span class="timeline-date" data-t="exp-4-date">2022 - 2023</span>
             </div>
           </div>
         </div>
@@ -256,18 +268,18 @@
           <div class="contact-grid">
             <div class="contact-card" data-aos="fade-up">
               <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-              <h3>Email</h3>
+              <h3 data-t="contact-email">Email</h3>
               <a href="mailto:marinasamir015@gmail.com">marinasamir015@gmail.com</a>
             </div>
             <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
               <div class="contact-icon"><i class="fas fa-phone"></i></div>
-              <h3>Phone</h3>
+              <h3 data-t="contact-phone">Phone</h3>
               <a href="tel:+201282108699">+20 1282108699</a>
             </div>
             <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
               <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <h3>Location</h3>
-              <p>Egypt</p>
+              <h3 data-t="contact-loc">Location</h3>
+              <p data-t="contact-loc-val">Egypt</p>
             </div>
           </div>
           <div class="social-links" data-aos="fade-up" data-aos-delay="300">
@@ -290,7 +302,7 @@
 
     <footer>
       <div class="container">
-        <p>&copy; 2026 Marina Samir. Built with <i class="fas fa-heart" style="color: var(--secondary)"></i> & .NET Spirit.</p>
+        <p data-t="footer-text">&copy; 2026 Marina Samir. Built with <i class="fas fa-heart" style="color: var(--secondary)"></i> & .NET Spirit.</p>
       </div>
     </footer>
 
