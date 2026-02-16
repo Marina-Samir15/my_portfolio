@@ -18,6 +18,10 @@
   --shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
   --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+html, body {
+  overflow-x: hidden;
+}
+
 
 /* Light theme variables */
 body.light-theme {
@@ -1173,9 +1177,7 @@ footer i {
 /* =========================================
    11. Responsive Design - Completely Fixed
    ========================================= */
-/* =========================================
-   11. Responsive Design - Completely Fixed
-   ========================================= */
+
 
 /* الشاشات المتوسطة والكبيرة (أكبر من 992px) - الوضع الطبيعي */
 @media (min-width: 993px) {
