@@ -286,7 +286,7 @@ function updateLanguage(lang) {
   type();
 }
 
-// 7. DOM Content Loaded
+// 7. DOM Content Loaded - مع تحسينات للـ mobile menu
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggler");
   const navLinks = document.getElementById("nav-links");
@@ -300,22 +300,43 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize language
   updateLanguage(currentLang);
 
-  // Mobile menu toggle
+  // Mobile menu toggle - محسن
   if (menuToggle) {
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       menuToggle.classList.toggle("open");
       navLinks.classList.toggle("active");
-      document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
+      
+      // منع التمرير عندما تكون القائمة مفتوحة
+      if (navLinks.classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
     });
   }
 
-  // Close mobile menu on link click
+  // Close mobile menu on link click - محسن
   document.querySelectorAll(".nav-links a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menuToggle.classList.remove("open");
-      navLinks.classList.remove("active");
-      document.body.style.overflow = "auto";
+    link.addEventListener("click", (e) => {
+      // إذا كانت القائمة مفتوحة في الموبايل، أغلقها
+      if (window.innerWidth <= 992) {
+        menuToggle.classList.remove("open");
+        navLinks.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
     });
+  });
+
+  // Close mobile menu when clicking outside - إضافة ممتازة
+  document.addEventListener("click", (e) => {
+    if (window.innerWidth <= 992) {
+      if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        menuToggle.classList.remove("open");
+        navLinks.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+    }
   });
 
   // Navbar scroll effect
@@ -343,7 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Smooth scroll for anchor links
+  // Smooth scroll for anchor links - محسن
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
@@ -351,9 +372,12 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const target = document.querySelector(href);
         if (target) {
-          const offsetTop = target.offsetTop - 80;
+          // حساب المسافة مع مراعاة ارتفاع النافبار
+          const navbarHeight = navbar.offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+          
           window.scrollTo({
-            top: offsetTop,
+            top: targetPosition,
             behavior: 'smooth'
           });
         }
@@ -361,20 +385,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Handle window resize
+  // Handle window resize - محسن
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 992 && navLinks.classList.contains('active')) {
+    if (window.innerWidth > 992) {
+      // إذا كنا في شاشة كبيرة، تأكد أن القائمة مخفية بشكل صحيح
+      if (navLinks.classList.contains('active')) {
+        menuToggle.classList.remove("open");
+        navLinks.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+      
+      // تأكد أن القائمة تظهر بشكل طبيعي في الشاشات الكبيرة
+      navLinks.style.height = '';
+      navLinks.style.visibility = '';
+      navLinks.style.opacity = '';
+    } else {
+      // في الشاشات الصغيرة، تأكد أن القائمة مخفية عند تحميل الصفحة
+      navLinks.classList.remove('active');
       menuToggle.classList.remove("open");
-      navLinks.classList.remove("active");
       document.body.style.overflow = "auto";
     }
   });
-});
 
-// 8. Handle back/forward cache
-window.addEventListener('pageshow', (event) => {
-  if (event.persisted) {
-    updateTheme(currentTheme);
-    updateLanguage(currentLang);
-  }
+  // Trigger resize on load للتأكد من الحالة الصحيحة
+  window.dispatchEvent(new Event('resize'));
 });
