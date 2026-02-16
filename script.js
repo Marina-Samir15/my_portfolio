@@ -99,7 +99,7 @@ const translations = {
     "contact-email": "Email",
     "contact-phone": "Phone",
     "contact-loc": "Location",
-    "contact-loc-val": "Egypt",
+    "contact-loc-val": "Assiut",
     "footer-text":
       "&copy; 2026 Marina Samir. Built with <i class='fas fa-heart' style='color: var(--secondary)'></i>.",
   },
