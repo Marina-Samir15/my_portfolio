@@ -98,23 +98,8 @@ body.light-theme::after {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
-/* ===== Single Section Mode ===== */
-
-.hero,
-.about-section,
-.skills-section,
-.projects-section,
-.experience-section,
-.services-section,
-.contact-section {
-  display: none;
-}
-
-.active-section {
-  display: block;
-}
-
 
 [lang="ar"] * {
   font-family: "Cairo", sans-serif;
@@ -1588,4 +1573,90 @@ footer i {
   .contact-section {
     scroll-margin-top: 65px;
   }
+}
+/* =========================================
+   12. Single Section Display with Home
+   ========================================= */
+
+.hero,
+#about,
+#skills,
+#projects,
+#experience,
+#services,
+#contact {
+  transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease,
+    padding 0.5s ease;
+  overflow: hidden;
+}
+
+.hero[style*="display: none"],
+#about[style*="display: none"],
+#skills[style*="display: none"],
+#projects[style*="display: none"],
+#experience[style*="display: none"],
+#services[style*="display: none"],
+#contact[style*="display: none"] {
+  display: none !important;
+}
+
+.hero.active-section-display,
+#about.active-section-display,
+#skills.active-section-display,
+#projects.active-section-display,
+#experience.active-section-display,
+#services.active-section-display,
+#contact.active-section-display {
+  animation: sectionFadeIn 0.6s ease forwards;
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  height: auto !important;
+  min-height: 100vh !important;
+}
+
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links a.active-link {
+  color: var(--primary) !important;
+  font-weight: 700 !important;
+  position: relative;
+}
+
+.nav-links a.active-link::after {
+  width: 100% !important;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+@media (max-width: 992px) {
+  .nav-links a.active-link {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 210, 255, 0.1),
+      rgba(255, 0, 204, 0.1)
+    );
+    border-radius: 30px;
+    padding: 8px 20px !important;
+    margin: 5px 0;
+  }
+
+  .nav-links a.active-link::after {
+    display: none;
+  }
+}
+
+footer {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  height: auto !important;
 }
