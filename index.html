@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar - Redesigned -->
+    <!-- Navbar - Redesigned with Theme Toggle -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
                 <div class="logo-icon">
-                    <span class="logo-dot"></span>
+                    <i class="fas fa-code"></i>
                 </div>
-                <span class="logo-text">Marina<span>Samir</span></span>
+                <span class="logo-text" id="logo-name">Marina <span>Samir</span></span>
             </a>
 
             <div class="menu-toggler" id="menu-toggler">
@@ -34,7 +34,11 @@
                 <li><a href="#experience" data-t="nav-exp">Experience</a></li>
                 <li><a href="#services" data-t="nav-services">Services</a></li>
                 <li><a href="#contact" class="nav-cta" data-t="nav-contact">Contact</a></li>
-                <li class="lang-switch-container">
+                <li class="nav-actions">
+                    <button id="theme-toggle" class="theme-switch" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
                     <button id="lang-switch" class="lang-switch">العربية</button>
                 </li>
             </ul>
@@ -49,7 +53,7 @@
             <div class="hero-content" data-aos="fade-right" data-aos-duration="1500">
                 <h1>
                     <span class="hero-greeting" data-t="hero-greeting">Hi, I'm</span>
-                    <span class="hero-name">Marina Samir</span>
+                    <span class="hero-name" id="hero-name-display">Marina Samir</span>
                 </h1>
                 <p id="typewriter" class="typewriter"></p>
                 <p class="hero-bio" data-t="hero-bio">Full-Stack .NET Developer with a passion for creating responsive, user-friendly web applications.</p>

@@ -171,6 +171,7 @@ const translations = {
 };
 
 let currentLang = localStorage.getItem('portfolio-lang') || 'en';
+let currentTheme = localStorage.getItem('portfolio-theme') || 'dark';
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -230,7 +231,19 @@ if (typeof particlesJS !== 'undefined') {
   });
 }
 
-// 5. Language Switcher
+// 5. Theme Switcher
+function updateTheme(theme) {
+  currentTheme = theme;
+  localStorage.setItem('portfolio-theme', theme);
+  
+  if (theme === 'light') {
+    document.body.classList.add('light-theme');
+  } else {
+    document.body.classList.remove('light-theme');
+  }
+}
+
+// 6. Language Switcher
 function updateLanguage(lang) {
   currentLang = lang;
   localStorage.setItem('portfolio-lang', lang);
@@ -239,6 +252,7 @@ function updateLanguage(lang) {
   
   const t = translations[lang];
   
+  // Update all text elements with data-t attribute
   document.querySelectorAll('[data-t]').forEach(el => {
     const key = el.getAttribute('data-t');
     if (t[key]) {
@@ -246,11 +260,25 @@ function updateLanguage(lang) {
     }
   });
 
+  // Update name in logo and hero
+  const logoName = document.getElementById('logo-name');
+  const heroName = document.getElementById('hero-name-display');
+  
+  if (logoName) {
+    logoName.innerHTML = lang === 'en' ? 'Marina <span>Samir</span>' : 'مارينا <span>سمير</span>';
+  }
+  
+  if (heroName) {
+    heroName.textContent = lang === 'en' ? 'Marina Samir' : 'مارينا سمير';
+  }
+
+  // Update language button
   const langBtn = document.getElementById('lang-switch');
   if (langBtn) {
     langBtn.textContent = lang === 'en' ? 'العربية' : 'English';
   }
 
+  // Restart typewriter
   clearTimeout(typewriterTimeout);
   wordIndex = 0;
   charIndex = 0;
@@ -258,21 +286,28 @@ function updateLanguage(lang) {
   type();
 }
 
-// 6. DOM Content Loaded
+// 7. DOM Content Loaded
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggler");
   const navLinks = document.getElementById("nav-links");
   const navbar = document.querySelector(".navbar");
   const langBtn = document.getElementById("lang-switch");
+  const themeToggle = document.getElementById("theme-toggle");
 
-  updateLanguage('en');
+  // Initialize theme
+  updateTheme(currentTheme);
 
+  // Initialize language
+  updateLanguage(currentLang);
+
+  // Mobile menu toggle
   menuToggle.addEventListener("click", () => {
     menuToggle.classList.toggle("open");
     navLinks.classList.toggle("active");
     document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
   });
 
+  // Close mobile menu on link click
   document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
       menuToggle.classList.remove("open");
@@ -281,6 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Navbar scroll effect
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
       navbar.classList.add("scrolled");
@@ -289,26 +325,50 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Language switch
   langBtn.addEventListener("click", () => {
     const newLang = currentLang === 'en' ? 'ar' : 'en';
     updateLanguage(newLang);
   });
-});
 
-// 7. Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    if (href !== '#') {
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        const offsetTop = target.offsetTop - 80;
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'smooth'
-        });
+  // Theme toggle
+  themeToggle.addEventListener("click", () => {
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    updateTheme(newTheme);
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          const offsetTop = target.offsetTop - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
       }
+    });
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 992 && navLinks.classList.contains('active')) {
+      menuToggle.classList.remove("open");
+      navLinks.classList.remove("active");
+      document.body.style.overflow = "auto";
     }
   });
+});
+
+// 8. Handle back/forward cache
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
+    updateTheme(currentTheme);
+    updateLanguage(currentLang);
+  }
 });
