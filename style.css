@@ -28,6 +28,33 @@ body.light-theme {
   --text-dim: var(--text-dim-light);
 }
 
+/* Light theme background blobs */
+body.light-theme::before,
+body.light-theme::after {
+  content: "";
+  position: fixed;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.1;
+  z-index: -1;
+  animation: moveBlobs 20s infinite alternate;
+}
+
+body.light-theme::before {
+  background: var(--primary);
+  top: -10%;
+  left: -10%;
+}
+
+body.light-theme::after {
+  background: var(--secondary);
+  bottom: -10%;
+  right: -10%;
+  animation-delay: -10s;
+}
+
 [lang="ar"] {
   direction: rtl;
   font-family: 'Cairo', sans-serif;
@@ -112,7 +139,7 @@ body::after {
 }
 
 /* =========================================
-   2. Navbar (Redesigned - Clean & Modern)
+   2. Navbar (Fixed & Responsive)
    ========================================= */
 .navbar {
   position: fixed;
@@ -150,9 +177,10 @@ body.light-theme .navbar.scrolled {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
-/* Logo - New Design */
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -163,6 +191,7 @@ body.light-theme .navbar.scrolled {
   font-weight: 700;
   position: relative;
   overflow: hidden;
+  z-index: 1001;
 }
 
 body.light-theme .logo {
@@ -211,6 +240,8 @@ body.light-theme .logo {
   list-style: none;
   gap: 30px;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -221,6 +252,7 @@ body.light-theme .logo {
   font-weight: 500;
   position: relative;
   padding: 5px 0;
+  white-space: nowrap;
 }
 
 .nav-links a::after {
@@ -243,15 +275,21 @@ body.light-theme .logo {
   width: 100%;
 }
 
+/* Contact CTA Button - Fixed */
 .nav-cta {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: #fff !important;
-  padding: 10px 25px;
+  padding: 10px 20px !important;
   border-radius: 30px;
   font-weight: 600 !important;
   box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
   position: relative;
   overflow: hidden;
+  min-width: 110px;
+  text-align: center;
+  display: inline-block;
+  transform: none !important;
+  animation: none !important;
 }
 
 .nav-cta::before {
@@ -272,12 +310,13 @@ body.light-theme .logo {
 .nav-cta::after {
   display: none;
 }
+
 .nav-cta:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px) !important;
   box-shadow: 0 8px 25px rgba(0, 210, 255, 0.4);
 }
 
-/* Nav Actions (Theme Toggle & Language) */
+/* Nav Actions */
 .nav-actions {
   display: flex;
   align-items: center;
@@ -365,7 +404,7 @@ body.light-theme .theme-switch .fa-sun {
 }
 
 /* =========================================
-   3. Hero Section with Image
+   3. Hero Section
    ========================================= */
 .hero {
   min-height: 100vh;
@@ -721,7 +760,7 @@ section {
 }
 
 /* =========================================
-   7. Projects Section
+   7. Projects Section - Fixed Hover Effect
    ========================================= */
 .projects-masonry {
   display: grid;
@@ -741,7 +780,7 @@ section {
 }
 
 .project-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   border-color: var(--primary);
   box-shadow: var(--shadow);
 }
@@ -757,7 +796,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease;
 }
 
 .project-overlay {
@@ -766,12 +805,12 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 210, 255, 0.9), rgba(255, 0, 204, 0.9));
+  background: linear-gradient(135deg, rgba(0, 210, 255, 0.7), rgba(255, 0, 204, 0.7));
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: var(--transition);
+  transition: opacity 0.3s ease;
 }
 
 .project-item:hover .project-overlay {
@@ -779,7 +818,7 @@ section {
 }
 
 .project-item:hover .project-img img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .overlay-btn {
@@ -789,13 +828,13 @@ section {
   text-decoration: none;
   font-weight: 600;
   border-radius: 30px;
-  transform: translateY(20px);
-  transition: var(--transition);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .project-item:hover .overlay-btn {
-  transform: translateY(0);
+  transform: scale(1);
 }
 
 .overlay-btn:hover {
@@ -1017,7 +1056,7 @@ section {
 }
 
 /* =========================================
-   10. Contact Section (Simple & Clean)
+   10. Contact Section
    ========================================= */
 .contact-grid {
   display: grid;
@@ -1126,7 +1165,7 @@ footer i {
 }
 
 /* =========================================
-   11. Responsive Design
+   11. Responsive Design - Fixed
    ========================================= */
 @media (max-width: 992px) {
   .menu-toggler {
@@ -1149,15 +1188,20 @@ footer i {
     z-index: 999;
     gap: 0;
     border-bottom: 1px solid var(--glass-border);
-  }
-
-  body.light-theme .nav-links {
-    background: rgba(255, 255, 255, 0.98);
+    margin: 0;
+    visibility: hidden;
+    opacity: 0;
   }
 
   .nav-links.active {
     height: calc(100vh - 80px);
     padding: 40px 0;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  body.light-theme .nav-links {
+    background: rgba(255, 255, 255, 0.98);
   }
 
   .nav-links li {
@@ -1166,6 +1210,7 @@ footer i {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.3s ease 0.2s;
+    margin: 10px 0;
   }
 
   .nav-links.active li {
@@ -1177,6 +1222,7 @@ footer i {
     display: block;
     padding: 15px;
     font-size: 1.2rem;
+    white-space: normal;
   }
 
   .nav-links a::after {
@@ -1186,12 +1232,20 @@ footer i {
   .nav-cta {
     display: inline-block;
     width: auto;
-    margin-top: 10px;
+    min-width: 120px;
+    margin: 10px auto;
   }
 
   .nav-actions {
-    flex-direction: column;
-    margin-top: 20px;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0 0;
+    gap: 20px;
+  }
+
+  .menu-toggler {
+    position: relative;
+    z-index: 1001;
   }
 
   .menu-toggler.open span:nth-child(1) {
@@ -1271,6 +1325,23 @@ footer i {
 }
 
 @media (max-width: 480px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .logo-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logo-icon i {
+    font-size: 1.4rem;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
   .hero-content h1 {
     font-size: 1.8rem;
   }
@@ -1307,19 +1378,6 @@ footer i {
 
   [lang="ar"] .timeline-marker {
     right: 10px;
-  }
-
-  .logo-text {
-    font-size: 1.2rem;
-  }
-  
-  .logo-icon {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .logo-icon i {
-    font-size: 1.4rem;
   }
 }
 

@@ -27,7 +27,7 @@ const translations = {
     "nav-projects": "Projects",
     "nav-exp": "Experience",
     "nav-services": "Services",
-    "nav-contact": "Contact",
+    "nav-contact": "Contact Me",
     "edu-title": "Education & Training",
     "edu-1-title": "Information Technology",
     "edu-1-org": "NATU University",
@@ -107,7 +107,7 @@ const translations = {
     "nav-projects": "مشاريعي",
     "nav-exp": "خبراتي",
     "nav-services": "خدماتي",
-    "nav-contact": "تواصل",
+    "nav-contact": "تواصل معي",
     "edu-title": "التعليم والتدريب",
     "edu-1-title": "تكنولوجيا المعلومات",
     "edu-1-org": "جامعة NATU",
@@ -301,11 +301,13 @@ document.addEventListener("DOMContentLoaded", () => {
   updateLanguage(currentLang);
 
   // Mobile menu toggle
-  menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("open");
-    navLinks.classList.toggle("active");
-    document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
-  });
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("open");
+      navLinks.classList.toggle("active");
+      document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
+    });
+  }
 
   // Close mobile menu on link click
   document.querySelectorAll(".nav-links a").forEach((link) => {
@@ -326,16 +328,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Language switch
-  langBtn.addEventListener("click", () => {
-    const newLang = currentLang === 'en' ? 'ar' : 'en';
-    updateLanguage(newLang);
-  });
+  if (langBtn) {
+    langBtn.addEventListener("click", () => {
+      const newLang = currentLang === 'en' ? 'ar' : 'en';
+      updateLanguage(newLang);
+    });
+  }
 
   // Theme toggle
-  themeToggle.addEventListener("click", () => {
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    updateTheme(newTheme);
-  });
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      updateTheme(newTheme);
+    });
+  }
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
