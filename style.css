@@ -36,7 +36,6 @@ body.light-theme {
   --text-dim: var(--text-dim-light);
 }
 
-/* Light theme background blobs - بشكل أوضح */
 body.light-theme::before,
 body.light-theme::after {
   content: "";
@@ -45,7 +44,7 @@ body.light-theme::after {
   height: 50vw;
   border-radius: 50%;
   filter: blur(120px);
-  opacity: 0.25 !important; /* زيادة الوضوح */
+  opacity: 0.25 !important;
   z-index: -1;
   animation: moveBlobsLight 25s infinite alternate;
 }
@@ -82,7 +81,6 @@ body.light-theme::after {
   font-family: "Cairo", sans-serif;
 }
 
-/* أيقونات Font Awesome - إصلاح مشكلة التشوه */
 [lang="ar"] i,
 [lang="ar"] .fas,
 [lang="ar"] .fab,
@@ -92,7 +90,7 @@ body.light-theme::after {
 }
 
 [lang="ar"] .fa-arrow-right::before {
-  content: "\f060"; /* سهم لليسار في العربية */
+  content: "\f060";
 }
 
 * {
@@ -1218,7 +1216,6 @@ footer i {
    11. Responsive Design - Completely Fixed
    ========================================= */
 
-/* الشاشات المتوسطة والكبيرة (أكبر من 992px) - الوضع الطبيعي */
 @media (min-width: 993px) {
   .nav-links {
     display: flex !important;
@@ -1250,16 +1247,13 @@ footer i {
   }
 }
 
-/* الشاشات الصغيرة والتابلت (أقل من 992px) */
 @media (max-width: 992px) {
-  /* أيقونة القائمة */
   .menu-toggler {
     display: flex !important;
     position: relative;
     z-index: 1001;
   }
 
-  /* القائمة المنسدلة */
   .nav-links {
     position: fixed !important;
     top: 80px !important;
@@ -1284,7 +1278,6 @@ footer i {
     pointer-events: none !important;
   }
 
-  /* القائمة عندما تكون مفتوحة */
   .nav-links.active {
     height: calc(100vh - 80px) !important;
     padding: 30px 0 !important;
@@ -1292,12 +1285,10 @@ footer i {
     pointer-events: all !important;
   }
 
-  /* الوضع الفاتح */
   body.light-theme .nav-links {
     background: rgba(255, 255, 255, 0.98) !important;
   }
 
-  /* عناصر القائمة */
   .nav-links li {
     width: 100% !important;
     text-align: center !important;
@@ -1307,7 +1298,6 @@ footer i {
     margin: 8px 0 !important;
   }
 
-  /* تأخير ظهور العناصر */
   .nav-links.active li:nth-child(1) {
     transition-delay: 0.1s;
   }
@@ -1330,13 +1320,11 @@ footer i {
     transition-delay: 0.7s;
   }
 
-  /* العناصر عندما تكون القائمة مفتوحة */
   .nav-links.active li {
     opacity: 1 !important;
     transform: translateY(0) !important;
   }
 
-  /* روابط القائمة */
   .nav-links a {
     display: inline-block !important;
     padding: 12px 25px !important;
@@ -1348,12 +1336,10 @@ footer i {
     border-radius: 40px !important;
   }
 
-  /* إخفاء الخط السفلي في الموبايل */
   .nav-links a::after {
     display: none !important;
   }
 
-  /* زر التواصل */
   .nav-cta {
     display: inline-block !important;
     min-width: 180px !important;
@@ -1370,7 +1356,6 @@ footer i {
     box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3) !important;
   }
 
-  /* أزرار الإجراءات (Theme و Language) */
   .nav-actions {
     flex-direction: row !important;
     justify-content: center !important;
@@ -1379,7 +1364,6 @@ footer i {
     width: 100% !important;
   }
 
-  /* أيقونة القائمة عند الفتح */
   .menu-toggler.open span:nth-child(1) {
     transform: translateY(8px) rotate(45deg) !important;
   }
@@ -1390,7 +1374,6 @@ footer i {
     transform: translateY(-8px) rotate(-45deg) !important;
   }
 
-  /* تعديل Hero Section للموبايل */
   .hero-container {
     grid-template-columns: 1fr !important;
     text-align: center !important;
@@ -1416,7 +1399,6 @@ footer i {
   }
 }
 
-/* الشاشات الصغيرة (أقل من 768px) */
 @media (max-width: 768px) {
   .navbar {
     height: 70px !important;
@@ -1468,7 +1450,6 @@ footer i {
   }
 }
 
-/* الشاشات الصغيرة جداً (أقل من 480px) - موبايل */
 @media (max-width: 480px) {
   .navbar {
     height: 65px !important;
@@ -1560,7 +1541,6 @@ footer i {
   }
 }
 
-/* تأكد من أن المحتوى لا يختفي تحت النافبار */
 .hero,
 .about-section,
 .skills-section,
