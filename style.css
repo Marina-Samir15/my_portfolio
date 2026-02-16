@@ -98,8 +98,23 @@ body.light-theme::after {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
 }
+/* ===== Single Section Mode ===== */
+
+.hero,
+.about-section,
+.skills-section,
+.projects-section,
+.experience-section,
+.services-section,
+.contact-section {
+  display: none;
+}
+
+.active-section {
+  display: block;
+}
+
 
 [lang="ar"] * {
   font-family: "Cairo", sans-serif;

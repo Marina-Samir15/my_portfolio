@@ -441,3 +441,32 @@ document.addEventListener("DOMContentLoaded", () => {
   // Trigger resize on load للتأكد من الحالة الصحيحة
   window.dispatchEvent(new Event("resize"));
 });
+// ===== Single Section Navigation =====
+
+const navLinks = document.querySelectorAll(".nav-links a");
+const sections = document.querySelectorAll(
+  ".hero, .about-section, .skills-section, .projects-section, .experience-section, .services-section, .contact-section"
+);
+
+document.querySelector("#about").classList.add("active-section");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute("href").replace("#", "");
+    const targetSection = document.getElementById(targetId);
+
+    sections.forEach(section => {
+      section.classList.remove("active-section");
+    });
+
+    if (targetSection) {
+      targetSection.classList.add("active-section");
+    }
+
+    document.querySelector(".nav-links").classList.remove("active");
+    document.querySelector(".menu-toggler").classList.remove("open");
+  });
+});
+
